@@ -1,0 +1,122 @@
+name:
+  name: Name
+  description: Name of the VPC to create
+  mandatory: true
+  secret: false
+  type: userInput
+  order: 1
+  updatable: false
+
+cidr:
+  name: CIDR
+  description: CIDR block for the VPC
+  mandatory: true
+  secret: false
+  type: userInput
+  order: 2
+  updatable: false
+
+database_subnets:
+  name: Database Subnets
+  description: List of database subnet CIDR blocks
+  mandatory: true
+  secret: false
+  type: userInputList
+  order: 3
+  updatable: true
+
+create_database_subnet_group:
+  name: Create Database Subnet Group
+  description: Create a database subnet group for the database subnets
+  mandatory: true
+  secret: false
+  type: userInputBoolean
+  depends_on:
+    - input: database_subnets
+      condition: not_empty
+  order: 4
+  updatable: true
+
+availability_zones:
+  name: Availability Zones
+  description: List of availability zones to use
+  mandatory: true
+  secret: false
+  type: userInputList
+  order: 5
+  updatable: true
+
+enable_dns_hostnames:
+  name: Enable DNS Hostnames
+  description: Enable DNS hostnames in the VPC
+  mandatory: true
+  secret: false
+  type: userInputBoolean
+  order: 6
+  updatable: true
+
+enable_dns_support:
+  name: Enable DNS Support
+  description: Enable DNS support in the VPC
+  mandatory: true
+  secret: false
+  type: userInputBoolean
+  order: 7
+  updatable: true
+
+enable_nat_gateway:
+  name: Enable NAT Gateway
+  description: Enable NAT Gateway for private subnets
+  mandatory: true
+  secret: false
+  type: userInputBoolean
+  order: 8
+  updatable: true
+
+single_nat_gateway:
+  name: Single NAT Gateway
+  description: Use a single NAT Gateway for all private subnets
+  mandatory: true
+  secret: false
+  type: userInputBoolean
+  depends_on:
+    - input: enable_nat_gateway
+      condition: true
+  order: 9
+  updatable: true
+
+enable_vpn_gateway:
+  name: Enable VPN Gateway
+  description: Enable VPN Gateway for private subnets
+  mandatory: true
+  secret: false
+  type: userInputBoolean
+  order: 10
+  updatable: true
+
+public_subnets:
+  name: Public Subnets
+  description: List of public subnet CIDR blocks
+  mandatory: false
+  secret: false
+  type: userInputList
+  order: 11
+  updatable: true
+
+private_subnets:
+  name: Private Subnets
+  description: List of private subnet CIDR blocks
+  mandatory: false
+  secret: false
+  type: userInputList
+  order: 12
+  updatable: true
+
+tags:
+  name: Tags
+  description: Tags to apply to the VPC
+  mandatory: false
+  secret: false
+  type: userInputKeyValueList
+  order: 13
+  updatable: true

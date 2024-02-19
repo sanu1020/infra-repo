@@ -1,0 +1,11 @@
+ID: 1
+Name: VPC
+Description: This Template creates a VPC
+Version: 1.0.0
+CloudServiceProvider: AWS
+CloudFormationTemplateURL: null
+Dependencies:
+  - modules/aws_modules/vpc_1.0.0
+Tags:
+  - AWS
+  - VPC
