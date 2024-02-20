@@ -1,5 +1,5 @@
 - ID: 1
-  Name: AWS VPC
+  Name: AWS VPC 1
   Description: This template creates a AWS VPC
   LatestVersion: 2.0.0
   TemplatePath: templates/vpc_1.0.0
@@ -8,7 +8,7 @@
     - AWS
     - VPC
 - ID: 2
-  Name: AWS VPC
+  Name: AWS VPC 2
   Description: This template creates a AWS VPC
   LatestVersion: 1.0.0
   TemplatePath: templates/vpc_1.0.0
@@ -16,4 +16,21 @@
   Tags:
     - AWS
     - VPC
-
+- ID: 3
+  Name: AWS VPC 3
+  Description: This template creates a AWS VPC
+  LatestVersion: 2.0.0
+  TemplatePath: templates/vpc_1.0.0
+  CloudServiceProvider: AWS
+  Tags:
+    - AWS
+    - VPC
+- ID: 4
+  Name: AWS VPC 4
+  Description: This template creates a AWS VPC
+  LatestVersion: 1.0.0
+  TemplatePath: templates/vpc_1.0.0
+  CloudServiceProvider: AWS
+  Tags:
+    - AWS
+    - VPC
