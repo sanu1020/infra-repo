@@ -16,12 +16,4 @@
   Tags:
     - AWS
     - VPC
-- ID: 3
-  Name: AWS VPC
-  Description: This template creates a AWS VPC
-  LatestVersion: 1.0.0
-  TemplatePath: templates/vpc_1.0.0
-  CloudServiceProvider: AWS
-  Tags:
-    - AWS
-    - VPC
+
